@@ -14,8 +14,9 @@ This logbook records the daily activities and progress of the project. Each entr
 | 7.2.2025  | 3:15       | Practicing vulnerability discovery | Learning how to identify and exploit common security flaws |
 | 8.2.2025  | 4          | Preparing for lab completion | Reviewing study materials and refining methodologies |
 | 9.2.2025  | 8          | Completed all labs | Finished all assigned labs and documented reflections |
-| 19.2.2025 | 10         | **Penetration Testing on Booking System - Day 1** | Setting up VirtualBox & Kali Linux, installing required tools (Docker, ZAP, Burp), cloning & running the test application |
-| 20.2.2025 | 12         | **Penetration Testing on Booking System - Day 2** | Conducted penetration tests, identified vulnerabilities (plaintext passwords, SQLi, privilege escalation), wrote and submitted the report |
+| 19.2.2025 | 10         | **Penetration Testing on Booking System - Phase 1 (Day 1)** | Setting up VirtualBox & Kali Linux, installing required tools (Docker, ZAP, Burp), cloning & running the test application |
+| 20.2.2025 | 12         | **Penetration Testing on Booking System - Phase 1 (Day 2)** | Conducted penetration tests, identified vulnerabilities (plaintext passwords, SQLi, privilege escalation), wrote and submitted the report |
+| 5.3.2025  | 7          | **Penetration Testing on Booking System - Phase 2** | Conducted additional penetration tests using ZAP by Checkmarx, investigated API response inconsistencies, and updated security findings |
 
 ---
 
@@ -47,15 +48,17 @@ By injecting SQL payloads into login forms, I managed to authenticate without va
 
 ---
 
-## **New Reflection: Penetration Testing on Booking System (19-20.2.2025)**
-I spent **two days (20 hours total)** conducting a **full penetration test** on the **Booking System’s registration page**.  
-### **Day 1 (19.2.2025): Setting Up the Environment**
+## **New Reflection: Penetration Testing on Booking System (19-20.2.2025 & 5.3.2025)**
+I spent **two days (20 hours total) on Phase 1** and **an additional 7 hours on Phase 2**, conducting a **full penetration test** on the **Booking System’s registration page**.  
+
+### **Phase 1: Initial Penetration Testing (19-20.2.2025)**
+#### **Day 1 (19.2.2025): Setting Up the Environment**
 - Installed **VirtualBox & Kali Linux**.
 - Installed **Docker, OWASP ZAP, and Burp Suite** for penetration testing.
 - Cloned the **Booking System repository** and deployed the app with **Docker Compose**.
 - Confirmed that the system was **running on localhost**.
 
-### **Day 2 (20.2.2025): Penetration Testing & Reporting**
+#### **Day 2 (20.2.2025): Penetration Testing & Reporting**
 - **Tested the registration system** for vulnerabilities.
 - **Key Findings:**
   - **Plaintext Password Storage** 🛑 (**Critical**)  
@@ -74,11 +77,18 @@ I spent **two days (20 hours total)** conducting a **full penetration test** on 
 - **Pushed the findings to GitHub** and submitted the report.
 - **Posted vulnerability findings** in the discussion forum.
 
+### **Phase 2: Updated Penetration Testing (5.3.2025)**
+- Conducted an **updated scan using ZAP by Checkmarx**.
+- **Investigated API response inconsistencies** with different User-Agent headers.
+- **Key Finding:**
+  - **User-Agent Fuzzer Alert** ⚠ (**Medium**)
+    - The system responded **differently** to requests with different **User-Agent headers**.
+    - **Fix:** Ensure uniform response handling for all User-Agent headers.
+- **Updated the penetration testing report with new findings**.
+
 ---
 
 ## **Conclusion**
 Completing these labs and penetration tests was an insightful experience that reinforced my understanding of web security vulnerabilities. I spent time getting familiar with security tools, setting up test environments, and refining my testing methodologies. The hands-on approach helped me build confidence in identifying and mitigating security risks.  
 
 Going forward, I plan to explore **more advanced vulnerabilities** and improve my **exploitation techniques**. This logbook will be updated regularly to track future progress and learning. 🚀
-
-
