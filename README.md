@@ -1,6 +1,6 @@
-# Project Logbook
+# Project Logbook  
 
-This logbook records the daily activities and progress of the project. Each entry lists the hours spent, the focus of the work, and the output generated.
+This logbook records the daily activities and progress of the project. Each entry lists the hours spent, the focus of the work, and the output generated.  
 
 | Date      | Used Hours | Subject(s)   | Output          |
 |-----------|------------|--------------|-----------------|
@@ -17,6 +17,34 @@ This logbook records the daily activities and progress of the project. Each entr
 | 19.2.2025 | 10         | **Penetration Testing on Booking System - Phase 1 (Day 1)** | Setting up VirtualBox & Kali Linux, installing required tools (Docker, ZAP, Burp), cloning & running the test application |
 | 20.2.2025 | 12         | **Penetration Testing on Booking System - Phase 1 (Day 2)** | Conducted penetration tests, identified vulnerabilities (plaintext passwords, SQLi, privilege escalation), wrote and submitted the report |
 | 5.3.2025  | 7          | **Penetration Testing on Booking System - Phase 2** | Conducted additional penetration tests using ZAP by Checkmarx, investigated API response inconsistencies, and updated security findings |
+| 16.3.2025 | 6          | **MD5 Hash Cracking & Password Recovery** | Used Hashcat with RockYou, online hash lookup services, and brute-force attempts to crack password hashes. Found 7/10 passwords but brute-force estimates exceeded 30+ years for the rest. |
+
+---
+
+## **New Reflection: MD5 Hash Cracking & Password Recovery (16.3.2025)**
+Spent **6 hours** working on **password cracking techniques** using **Hashcat and online lookup services**.  
+
+### **Approach & Findings**
+1. **Dictionary Attack**  
+   - Used **Hashcat** with **RockYou.txt**.  
+   - Cracked several common passwords but some remained unknown.  
+
+2. **Online Hash Lookup Services**  
+   - Tested sites like **Reverse Hash Lookup, Hashes.org, MD5Online, and LeakedPassword**.  
+   - Retrieved a few additional passwords from these databases.  
+
+3. **Brute-Force Testing**  
+   - Attempted **custom brute-force attack** with varying lengths.  
+   - **Final estimation: 30+ years** required to crack remaining hashes.  
+   - **Conclusion:** Impractical to continue brute-force attempts.  
+
+### **Outcome**
+✅ **7 out of 10 passwords cracked.**  
+✅ **Online hash lookup services were the fastest method.**  
+❌ **Brute-force cracking was infeasible due to extreme time estimates.**  
+
+This task provided valuable hands-on experience in **password security** and **real-world cracking limitations**. Future work will focus on **more advanced attack methods** and **optimization techniques**.
+
 
 ---
 
